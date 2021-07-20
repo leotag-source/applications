@@ -1,12 +1,18 @@
 <script language="CSphinx">
 char   os_name[]    = "MENUET01";
 dword  os_version   = 0x00000001;
-dword  start_addr   = ENTRY_POINT;
+dword  start_addr   = #______INIT______;
 dword  final_addr   = #______STOP______+32;
-dword  alloc_mem    = MEMSIZE;
-dword  x86esp_reg   = MEMSIZE;
+dword  alloc_mem    = 0x10000;
+dword  x86esp_reg   = 0x10000;
 dword  I_Param      = #param;
 dword  I_Path       = #program_path;
 char param[4096];
 char program_path[4096];
+
+:void ______INIT______()
+{
+  
+}
+______STOP______:
 </script>
