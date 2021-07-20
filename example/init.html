@@ -16,7 +16,47 @@ char program_path[4096];
 }
 ______STOP______:
 </script>
+
 <script name="WaitEvent" language="CSphinx">
   $mov eax,10
+  $int 0x40
+</script>
+
+<script name="GetButtonID" language="CSphinx">
+  $mov eax,17
+  $int  0x40
+  $shr eax,8
+</script>
+
+<script name="ExitProcess" language="CSphinx">
+  $mov eax,-1;
+  $int 0x40
+</script>
+
+<script 
+name="DefineAndDrawWindow" 
+language="CSphinx" 
+int:x=0 
+int:y=0 
+int:w=350 
+int:h=300 
+int:type="0x34" 
+int:color="0xFFFFFF" 
+str:title="Example" 
+int:flags=0>
+  EAX = 12;
+  EBX = 1;
+  $int 0x40
+
+  $xor EAX,EAX
+  EBX = x << 16 + w;
+  ECX = y << 16 + h;
+  EDX = type << 24 | color;
+  EDI = title;
+  ESI = flags;
+  $int 0x40
+
+  EAX = 12;
+  EBX = 2;
   $int 0x40
 </script>
