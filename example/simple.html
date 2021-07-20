@@ -1,10 +1,7 @@
-<window title="Example application">
-  <button signal:click="click">Click Me!</button>
-  <add x=5 y=10 />
-</window>
-<signal name="click">
-  <exit />
-</signal>
-<tag name="add" int:x="0" int:y="0">
-  <span>@(x+y)</span>
-</tag>
+<application>
+  <loop>
+    <switch compare="@WaitEvent()">
+      <case value=1>
+        <DefineAndDrawWindow />
+      </case>
+</application>
