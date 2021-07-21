@@ -67,14 +67,14 @@ int:flags=0>
   $int 0x40
 </script>
 
-<script name="switch->case" int:compare=0 language="CSphinx">
-  switch(%compare) {
+<script name="switch" type="macro" int:compare=0 language="CSphinx">
+  switch(compare) {
     %%CODE%%
   }
 </script>
 
-<script name="case" int:value=0 language="CSphinx">
-  case %value:
+<script name="case" type="macro" int:value=0 language="CSphinx">
+  case value:
     %%CODE%%
   break;
 </script>
