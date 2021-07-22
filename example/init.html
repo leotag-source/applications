@@ -63,7 +63,7 @@ int:flags=0>
 </script>
 
 <script name="switch" type="macro" int:compare=0 language="CSphinx">
-  switch(compare) {
+  switch(%compare%) {
     %%CODE%%
   }
 </script>
@@ -75,7 +75,7 @@ int:flags=0>
 </script>
 
 <script name="case" type="macro" int:value=0 language="CSphinx">
-  case value:
+  case %value%:
     %%CODE%%
   break;
 </script>
