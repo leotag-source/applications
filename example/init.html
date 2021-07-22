@@ -38,8 +38,12 @@ ______STOP______:
 </script>
 
 <script name="DefineAndDrawWindow" language="CSphinx" 
-x%=0 y%=0 w%=350 h%=300 type%="0x34" color%="0xFFFFFF" title$="Example" flags%=0>
-
+int:x=0 int:y=0 
+int:w=350 int:h=300
+int:type="0x34"
+int:color="0xFFFFFF"
+str:title="Example"
+int:flags=0>
   EAX = 12;
   EBX = 1;
   $int 0x40
@@ -57,8 +61,8 @@ x%=0 y%=0 w%=350 h%=300 type%="0x34" color%="0xFFFFFF" title$="Example" flags%=0
   $int 0x40
 </script>
 
-<script name="switch" type="macro" compare%=0 language="CSphinx">
-  switch(%compare%) {
+<script name="switch" type="macro" int:compare=0 language="CSphinx">
+  switch(~compare~) {
     %%CODE%%
   }
 </script>
@@ -69,8 +73,8 @@ x%=0 y%=0 w%=350 h%=300 type%="0x34" color%="0xFFFFFF" title$="Example" flags%=0
   }
 </script>
 
-<script name="case" type="macro" value%=0 language="CSphinx">
-  case %value%:
+<script name="case" type="macro" int:value=0 language="CSphinx">
+  case ~value~:
     %%CODE%%
   break;
 </script>
