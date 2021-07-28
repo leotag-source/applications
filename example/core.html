@@ -17,10 +17,6 @@ dword  I_Path       = 0;
 ______STOP______:
 </script>
 
-<script name="application" language="CSphinx">
-  %%CODE%%
-</script>
-
 <script name="WaitEvent" language="CSphinx">
   $mov eax,10
   $int 0x40
@@ -77,4 +73,8 @@ int:flags=0>
   case ~value~:
     %%CODE%%
   break;
+</script>
+
+<script name="application" language="CSphinx">
+  %%CODE%%
 </script>
