@@ -3,7 +3,7 @@
 <script language="CSphinx">
 char   os_name[]    = "MENUET01";
 dword  os_version   = 0x00000001;
-dword  start_addr   = #application;
+dword  start_addr   = #main;
 dword  final_addr   = #______STOP______+32;
 dword  alloc_mem    = 0x10000;
 dword  x86esp_reg   = 0x10000;
@@ -13,6 +13,10 @@ dword  I_Path       = 0;
 //char program_path[4096];
   
 %%INIT%%
+
+void main() {
+%%CODE%%
+}
 
 ______STOP______:
 </script>
@@ -73,6 +77,3 @@ int:flags=0>
   
 </script>
 
-<script name="application" language="CSphinx">
-  %%CODE%%
-</script>
