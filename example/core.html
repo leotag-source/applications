@@ -64,20 +64,20 @@ int:flags=0>
 <script name="switch" int:compare=0 language="CSphinx">
   int cmp = 0;
   cmp = compare;
-  innercode(#cmp);
+  innerhtml(#cmp);
 </script>
 
 <script name="loop" language="CSphinx">
   while(1) {
-    innercode(0);
+    innerhtml(0);
   }
 </script>
 
 <script name="case" int:value=0 language="CSphinx">
-  if (DSDWORD[context] == value) innercode(0);
+  if (DSDWORD[context] == value) innerhtml(0);
 </script>
 
 <script name="application" language="CSphinx">
-  innercode(0);
+  innerhtml(0);
 </script>
 
