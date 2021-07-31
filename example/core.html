@@ -1,17 +1,26 @@
 <!-- C Sphinx -->
 
 <script language="CSphinx">
-char   os_name[]    = "MENUET01";
+#pragma option OST
+#pragma option ON
+#pragma option cri-
+#pragma option -CPA
+#initallvar 0
+#jumptomain FALSE
+
+#startaddress 0x10000
+
+#code32 TRUE
+
+char   os_name[8]   = {'M','E','N','U','E','T','0','1'};
 dword  os_version   = 0x00000001;
 dword  start_addr   = #main;
 dword  final_addr   = #______STOP______+32;
-dword  alloc_mem    = 0x10000;
-dword  x86esp_reg   = 0x10000;
+dword  alloc_mem    = 20000;
+dword  x86esp_reg   = 20000;
 dword  I_Param      = 0;
 dword  I_Path       = 0;
-//char param[4096];
-//char program_path[4096];
-  
+
 %%INIT%%
 
 void main() {
