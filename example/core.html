@@ -62,9 +62,7 @@ int:flags=0>
 </script>
 
 <script name="switch" int:compare=0 language="CSphinx">
-  int cmp = 0;
-  cmp = compare;
-  innerhtml(#cmp);
+  innerhtml(compare);
 </script>
 
 <script name="loop" language="CSphinx">
@@ -74,7 +72,7 @@ int:flags=0>
 </script>
 
 <script name="case" int:value=0 language="CSphinx">
-  if (DSDWORD[context] == value) innerhtml(0);
+  if (context == value) innerhtml(0);
 </script>
 
 <script name="application" language="CSphinx">
