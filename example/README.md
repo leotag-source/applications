@@ -1,1 +1,1 @@
-# example of simple applications
+# Example of simple applications
