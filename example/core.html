@@ -71,6 +71,17 @@ int:flags=0>
   $int 0x40
 </script>
 
+<script name="DefineButton" int:x="0" int:y="0" int:id="0" int:color="0" int:w="50" int:h="20" language="CSphinx">
+  EAX = 8;
+  EDX = id + BT_DEL;
+  $int 0x40;
+  EDX = id;
+  ESI = color;
+  EBX = x<<16+w;
+  ECX = y<<16+h;
+  $int 0x40
+</script>
+
 <script name="switch" int:compare=0 language="CSphinx">
   evalChildren(compare);
 </script>
