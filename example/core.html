@@ -96,8 +96,8 @@ int:flags=0>
   $int 0x40
 
   $xor EAX,EAX
-  EBX = x << 16 + w;
-  ECX = y << 16 + h;
+  EBX = left << 16 + width;
+  ECX = top << 16 + height;
   EDX = type << 24 | color;
   EDI = title;
   ESI = flags;
@@ -114,8 +114,8 @@ int:flags=0>
   $int 0x40;
   EDX = id;
   ESI = color;
-  EBX = x<<16+w;
-  ECX = y<<16+h;
+  EBX = left<<16+width;
+  ECX = top<<16+height;
   $int 0x40
 </script>
 
