@@ -6,7 +6,11 @@
         <DefineButton />
       </case>
       <case value="3">
-        <ExitProcess />
+        <switch compare="api_getbuttonid(0,0)">
+          <case value="1">
+            <ExitProcess />
+          </case>
+        </switch>
       </case>
     </switch>
   </loop>
