@@ -79,6 +79,12 @@ ______STOP______:
   $shr eax,8
 </script>
 
+<script name="GetButtonID" language="CSphinx">
+  $mov eax,17
+  $int  0x40
+  $shr eax,8
+</script>
+
 <script name="ExitProcess" language="CSphinx">
   $mov eax,-1;
   $int 0x40
