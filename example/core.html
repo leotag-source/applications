@@ -85,8 +85,8 @@ ______STOP______:
 </script>
 
 <script name="DefineAndDrawWindow" language="CSphinx" 
-pxl:x="0px" pxl:y="0px" 
-pxl:w="350px" pxl:h="300px"
+pxl:left="0px" pxl:top="0px" 
+pxl:width="350px" pxl:height="300px"
 int:type="0x34"
 clr:color="white"
 str:title="Example application"
@@ -108,7 +108,7 @@ int:flags=0>
   $int 0x40
 </script>
 
-<script name="DefineButton" pxl:x="0px" pxl:y="0px" int:id="100" clr:color="#0d6efd" pxl:w="70px" pxl:h="20px" language="CSphinx">
+<script name="DefineButton" pxl:left="0px" pxl:top="0px" int:id="100" clr:color="#0d6efd" pxl:width="70px" pxl:height="20px" language="CSphinx">
   EAX = 8;
   EDX = id + BT_DEL;
   $int 0x40;
