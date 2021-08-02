@@ -1,12 +1,12 @@
 <application>
   <loop>
-    <switch compare="api_waitevent(0,0)">
+    <switch compare="@waitEvent">
       <case value="1">
-        <DefineAndDrawWindow left="50px" top="50px" height="600px" />
+        <DefineAndDrawWindow left="50px" top="50px" height="500px" />
         <DefineButton />
       </case>
       <case value="3">
-        <switch compare="api_getbuttonid(0,0)">
+        <switch compare="@getButtonId">
           <case value="1">
             <ExitProcess />
           </case>
