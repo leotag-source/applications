@@ -120,20 +120,22 @@ int:flags=0>
 </script>
 
 <script name="switch" int:compare=0 language="CSphinx">
-  evalChildren(compare);
+  if (evalChildren) evalChildren(compare);
 </script>
 
 <script name="loop" language="CSphinx">
   while(1) {
-    evalChildren(0);
+    if (evalChildren) evalChildren(0);
   }
 </script>
 
 <script name="case" int:value=0 language="CSphinx">
-  if (context == value) evalChildren(0);
+  if (context == value) {
+    if (evalChildren) evalChildren(0);
+  }
 </script>
 
 <script name="application" language="CSphinx">
-  evalChildren(0);
+  if (evalChildren) evalChildren(0);
 </script>
 
