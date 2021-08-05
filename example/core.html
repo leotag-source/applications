@@ -61,7 +61,7 @@ dword  I_Path       = 0;
 %%INIT%%
 
 void main() {
-  dword context = 0;
+  dword parentNode = 0;
   %%CODE%%
 }
 
@@ -130,7 +130,7 @@ int:flags=0>
 </script>
 
 <script name="case" int:value=0 language="CSphinx">
-  if (context == value) {
+  if (parentNode == value) {
     if (evalChildren) evalChildren(0);
   }
 </script>
