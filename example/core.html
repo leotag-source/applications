@@ -68,24 +68,24 @@ void main() {
 ______STOP______:
 </script>
 
-<script name="GetScreenWidth" language="CSphinx">
+<script name="GetScreenWidth" return="int" language="CSphinx">
   $mov eax, 14
   $int 0x40
   $shr eax, 16
 </script>
 
-<script name="GetScreenHeight" language="CSphinx">
+<script name="GetScreenHeight" return="int" language="CSphinx">
   $mov eax, 14
   $int 0x40
   $and eax,0x0000FFFF
 </script>
 
-<script name="WaitEvent" language="CSphinx">
+<script name="WaitEvent" return="int" language="CSphinx">
   $mov eax,10
   $int 0x40
 </script>
 
-<script name="GetButtonID" language="CSphinx">
+<script name="GetButtonID" return="int" language="CSphinx">
   $mov eax,17
   $int  0x40
   $shr eax,8
@@ -131,7 +131,7 @@ int:flags=0>
   $int 0x40
 </script>
 
-<script name="EmptyFunction" language="CSphinx">
+<script name="EmptyFunction" return="int" language="CSphinx">
   return 0
 </script>
 
