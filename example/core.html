@@ -68,6 +68,18 @@ void main() {
 ______STOP______:
 </script>
 
+<script name="GetScreenWidth" language="CSphinx">
+  $mov eax, 14
+  $int 0x40
+  $shr eax, 16
+</script>
+
+<script name="GetScreenHeight" language="CSphinx">
+  $mov eax, 14
+  $int 0x40
+  $and eax,0x0000FFFF
+</script>
+
 <script name="WaitEvent" language="CSphinx">
   $mov eax,10
   $int 0x40
