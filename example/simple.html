@@ -3,11 +3,14 @@
     <switch compare="waitEvent">
       <case value="1">
         <DefineAndDrawWindow title="Simple Application" />
-        <DefineButton color="#FAFBFC" />
+        <DefineButton color="#FAFBFC" id="20" left="50px" top="50px" width="120px" />
       </case>
       <case value="3">
         <switch compare="getButtonId">
           <case value="1">
+            <ExitProcess />
+          </case>
+          <case value="20">
             <ExitProcess />
           </case>
         </switch>
