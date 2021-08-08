@@ -119,7 +119,11 @@ int:flags=0>
   $int 0x40
 </script>
 
-<script name="switch" int:compare=0 language="CSphinx">
+<script name="EmptyFunction" language="CSphinx">
+  return 0
+</script>
+
+<script name="switch" fnc:compare="EmptyFunction" language="CSphinx">
   if (evalChildren) evalChildren(compare);
 </script>
 
